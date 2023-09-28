@@ -26,7 +26,6 @@
       ]
     }
   },
-  "postCreateCommand": "sudo chown vscode /home/vscode/.aws",
   "remoteUser": "vscode",
   "remoteEnv": {
     "AWS_PROFILE": "terraform"

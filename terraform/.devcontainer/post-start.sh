@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# For aws configure
+sudo chown vscode /home/vscode/.aws
+
 # Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: MIT-0
 
