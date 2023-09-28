@@ -10,8 +10,25 @@
       "TFLINT_AWS_RULESET_VERSION": "0.21.1"
     }
   },
+  "mounts": [
+    {
+      "source": "ecs_study_aws",
+      "target": "/home/vscode/.aws",
+      "type": "volume"
+    }
+  ],
   "postStartCommand": "post-start",
-  "settings": {},
-  "extensions": ["hashicorp.terraform"],
-  "remoteUser": "vscode"
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "hashicorp.terraform"
+      ]
+    }
+  },
+  "postCreateCommand": "sudo chown vscode /home/vscode/.aws",
+  "remoteUser": "vscode",
+  "remoteEnv": {
+    "AWS_PROFILE": "terraform"
+  }
 }
