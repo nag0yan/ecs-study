@@ -21,8 +21,5 @@ RUN cd /tmp/ \
 
 USER root
 
-# For git-secrets hook
-RUN apt-get install -y git-secrets
-
 COPY post-start.sh /usr/local/bin/post-start
 RUN chmod +x /usr/local/bin/post-start
